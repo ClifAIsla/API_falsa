@@ -30,16 +30,19 @@ class Compañia {
 
 app.get("/api/users/new", (request, response) => {
     // console.log(request)
+    response.statusMessage = "Se acaba de crear una Usuario."
     return response.status(200).json( new Usuario() );
 });
 
 app.get("/api/companies/new", (request, response) => {
     // console.log(request)
+    response.statusMessage = "Se acaba de crear una Compañia."
     return response.status(200).json( new Compañia() );
 });
 
 app.get("/api/user/company", (request, response) => {
     // console.log(request)
+    response.statusMessage = "Se acaba de crear un Usuario y Compañia respectivamente.";
     return response.status(200).json( {"Company" : new Compañia(), "User" : new Usuario()} );
 });
 
